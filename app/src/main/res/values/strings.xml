@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NoShadow</string>
+    <string name="prefe_auth_key">.PREFERENCE_AUTH_KEY</string>
+    <string name="preference_auth_file_key">.PREFERENCE_AUTH_FILE_KEY</string>
+    <string name="preference_config_file_key">.PREFERENCE_CONFIG_FILE_KEY</string>
+    <string name="pref_config_key">.PREFERENCE_CONFIG_KEY</string>
+    <string name="pref_user_logged_key">.PREFERENCE_USER_KEY</string>
+    <string name="netwotk_job_count">com.liga.facens.NETWORK_JOB_COUNT</string>
+    <string name="last_communication">com.liga.facens.LAST_COMMUNICATION</string>
+    <string name="last_login">LASTLOGGEDINUSER</string>
+</resources>

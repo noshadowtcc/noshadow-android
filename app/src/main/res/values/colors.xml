@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="green_light">#70c216</color>
+    <color name="dont_know_facens">#9B9B9B</color>
+    <color name="gray_scale">#7F7F7F</color>
+    <color name="red">#d0021b</color>
+    <color name="portal_background">#F5F5F5</color>
+    <color name="tab_unselected_icon_color">#B3FFFFFF</color>
+    <color name="item_not_selected">#757575</color>
+    <color name="bg_splash">#043E6C</color>
+    <color name="bg_total">#747474</color>
+    <color name="bg_notify">#EEF4FF</color>
+    <color name="red_badge">#F43D32</color>
+    <color name="orange_pending">#FFC61B</color>
+    <color name="gray_text">#4A4A4A</color>
+    <color name="header_background">#F7F7F7</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="tecno_purple">#71297D</color>
+    <color name="test">#71297D</color>
+    <color name="purple_light_tf">#E4DBEC</color>
+    <color name="nice_gray">#EEEEEE</color>
+
+    <color name="app_bar_blue">#006DF0</color>
+    <color name="app_bar_purple">#8D46AC</color>
+</resources>
