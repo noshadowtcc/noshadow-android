@@ -13,8 +13,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.noshadow.app.model.BluetoothConnected;
+import com.noshadow.app.model.JobUpdate;
 import com.noshadow.app.model.LocationJob;
 import com.noshadow.app.model.LocationPayload;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -31,6 +35,7 @@ public class BluetoothManager extends BaseManager implements Bluetooth.Communica
     private List<BluetoothDevice> paired;
     private String name;
     private boolean registered = false;
+    private String deviceName = "";
 
     public BluetoothManager(Context context) {
         _context = context;
@@ -54,6 +59,7 @@ public class BluetoothManager extends BaseManager implements Bluetooth.Communica
 
                 IntentFilter filter = new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED);
                 _context.registerReceiver(mReceiver, filter);
+//                EventBus.getDefault().post(new BluetoothConnected(device.getName()));
                 registered = true;
                 return;
             }
@@ -63,12 +69,13 @@ public class BluetoothManager extends BaseManager implements Bluetooth.Communica
 
     @Override
     public void onConnect(BluetoothDevice device) {
-
+        deviceName = device.getName();
+        EventBus.getDefault().post(new BluetoothConnected(device.getName()));
     }
 
     @Override
     public void onDisconnect(BluetoothDevice device, String message) {
-
+        EventBus.getDefault().post(new BluetoothConnected(""));
     }
 
     @Override
@@ -128,8 +135,8 @@ public class BluetoothManager extends BaseManager implements Bluetooth.Communica
                 .addJobInBackground(
                         new LocationJob(payload,
                                 UUID.randomUUID(),
-                                "Localização",
-                                 latitude + "," + longitude));
+                                 latitude + "," + longitude,
+                                deviceName));
 
     }
 

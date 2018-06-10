@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:orientation="horizontal"
+    tools:ignore="MissingPrefix"
+    android:clickable="true">
+    
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.0"
+        android:layout_height="match_parent">
+
+
+
+    </FrameLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+
+        android:paddingBottom="5dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="3dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_compass" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="70dp"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="20dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="bottom|right"
+                android:layout_height="20dp">
+                <ImageView
+                    android:id="@+id/img_sended"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_double_check"
+                    tools:layout_editor_absoluteY="2dp" />
+                <ImageView
+                    android:id="@+id/img_pending"
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_clock_orange"
+                    tools:layout_editor_absoluteY="2dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09/02/2018 12:45"
+                android:layout_gravity="bottom|left"
+                android:layout_marginRight="22dp"
+                fontPath="fonts/Nunito.ttf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="11dp"
+                android:textSize="11dp"/>
+
+            <TextView
+                android:id="@+id/txt_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviado"
+                fontPath="fonts/Nunito-Bold.ttf"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="11dp"
+                android:textSize="11dp"/>
+            <TextView
+                fontPath="fonts/Nunito.ttf"
+                android:id="@+id/textView_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="TextView"
+                android:textSize="18dp"
+                app:layout_anchor="@+id/linearLayout"
+                android:layout_gravity="center_vertical|left"
+                app:layout_anchorGravity="center"
+                tools:layout_editor_absoluteY="2dp" />
+
+            <TextView
+                android:id="@+id/txt_description"
+                fontPath="fonts/Nunito-Bold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-1dp"
+                android:singleLine="true"
+                android:text="Semana da Engenharia"
+                android:textSize="14dp"
+                app:layout_anchor="@+id/linearLayout"
+                app:layout_anchorGravity="center"
+                tools:layout_editor_absoluteY="2dp" />
+
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

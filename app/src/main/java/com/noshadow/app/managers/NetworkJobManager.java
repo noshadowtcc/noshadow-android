@@ -132,7 +132,11 @@ public class NetworkJobManager extends BaseManager {
         }
 
         if(!added)
-            _itens.add(new JobObject(job.getIdentifier(), job.getDisplayName(), job.getDisplayDescription()));
+            _itens.add(0, new JobObject(job.getIdentifier(), job.getDisplayName(), job.getDisplayDescription()));
+
+        if(_itens.size() > 20){
+            _itens.remove(_itens.size()-1);
+        }
 
         EventBus.getDefault().post(new JobUpdate(getJobCount(), job.getIdentifier(), false));
         _jobManager.addJobInBackground(job);

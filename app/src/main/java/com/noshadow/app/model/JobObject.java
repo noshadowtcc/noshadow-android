@@ -67,7 +67,7 @@ public class JobObject {
     }
 
     public String getDateFormated() {
-        return DateFormat.format("dd/MM/yyyy HH:mm", date).toString();
+        return DateFormat.format("dd/MM/yyyy HH:mm:ss", date).toString();
     }
 
     public void setDate(Date date) {
